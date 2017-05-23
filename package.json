@@ -1,0 +1,17 @@
+{
+  "name": "scenic-route",
+  "version": "1.0.0",
+  "description": "An application using Google Maps/Street View APIs",
+  "author": "Daniel Pereira",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.4.2",
+    "express": "^4.5.1",
+    "geojson.lib.routeboxer": "0.0.6",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "^2.0.2",
+    "mongoose": "^4.2.6",
+    "morgan": "^1.2.2",
+    "route-boxer": "0.0.1"
+  }
+}

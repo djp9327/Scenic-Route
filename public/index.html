@@ -1,0 +1,94 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en" class="no-js" ng-app="scenicRoute">
+<head>
+    <meta charset="UTF-8"> 
+	<base href="/">
+
+
+    <title>Scenic Route</title>
+	<meta name="description" content="An app which prodcues a slideshow of Google Street View images for a given route">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abril+Fatface">
+	<link rel="stylesheet" href="../bower_components/angular-selector/dist/angular-selector.css">
+	<!-- Holder JS -->
+	<script src="../bower_components/holderjs/holder.js"></script>
+	<!-- Google Maps API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs2XhOZmiyzgkTlQQM5lq_2TPkw3R6IUk&libraries=places"></script>
+	<!-- JS -->
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="../bower_components/angular-route/angular-route.min.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+	<script src="../bower_components/routeboxer/src/RouteBoxer.js"></script>
+	<script src="../bower_components/SlidesJs/source/slides.js"></script>
+	<script src="../bower_components/Slides-SlidesJS-3/Slides-SlidesJS-3/source/jquery.slides.min.js"></script>
+	<script src="../bower_components/angular-selector/dist/angular-selector.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/AddCtrl.js"></script>
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/TripCtrl.js"></script>
+	<script src="js/services/TripService.js"></script>
+	<script src="js/services/gservice.js"></script>
+</head>
+
+<style>
+	#map {
+		height:550px;
+		width:550px;
+	}
+
+
+	#myContainer {
+		border: 1px solid blue;
+	}
+
+	#myHeader{
+	}
+
+	#myRowContent{
+		display: -webkit-flex;
+		display: flex;
+	}
+
+
+	#myFormGroup1 {
+		height:60px;
+dis	}
+
+	#myFormGroup2 {
+		height:60px;
+	}
+
+	#myFormGroup3 {
+		height:60px;
+	}
+
+
+
+</style>
+
+<body>
+<div class="container" id = "myContainer">
+	<div class="header" id = "myHeader">
+		<h3 class="text-muted">Scenic Route</h3>
+	</div>
+	<div ng-view>
+
+	</div>
+	<hr/>
+	<!-- Footer -->
+	<div class="footer">
+		<p class="text-center"><span class="glyphicon glyphicon-check"></span>Created by Daniel Pereira</p>
+	</div>
+</div>
+</body>
+</html>

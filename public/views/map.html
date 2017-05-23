@@ -1,0 +1,44 @@
+<!-- Map -->
+<div class="row content" id = "myRowContent">
+    <div class="col-md-7" id = "myCol7">
+        <div id="map" style="width:645px; height:645px"></div>
+    </div>
+    <!-- Side Panel -->
+    <div class="col-md-5" id = "myCol5">
+        <div class="panel panel-default" id = "myPanel">
+            <!-- Panel Title -->
+            <div class="panel-heading" id = "myPanelHeading">
+                <h2 class="panel-title text-center">[Panel Title]</h2>
+            </div>
+            <!-- Panel Body -->
+            <div class="panel-body" id = "myPanelBody">
+                <!-- Creates Form (novalidate disables HTML validation, Angular will control -->
+                <form name="addForm"  novalidate>
+                    <!-- Text Boxes and Other User Inputs.  Note ng-model binds the values to Angular $scope -->
+                    <div class="form-group" id = "myFormGroup1">
+                        <label for="startingAddress">Start <span class="badge">All fields required</span></label>
+                        <input type="text" class="form-control" id="startingAddress" placeholder="155 Mason Terrace Brookline, MA" ng-model="startingAddress" required>
+                    </div>
+                    <div class="form-group" id = "myFormGroup2">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="24 Beacon St. Boston, MA" ng-model="destination" required>
+                    </div>
+                    <div class="form-group" id = "myFormGroup3">
+                        <label for="numViews">Number of Views</label>
+                        <input type="number" class="form-control" id="numViews" placeholder="5" ng-model="numViews" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="place_types">Place Types</label>
+                        <select selector
+                                multi="true"
+                                model="place_types_ids"
+                                options="place_types"
+                                value-attr="value"></select>
+                    </div>
+                    <!-- Submit Button Note that its tied to createUser() function from addCtrl.  Also note ng-disabled logic which prevents early submits -->
+                    <button type="submit" id = 'submit' class="btn btn-danger btn-block" ng-click="createTrip()" ng-disabled="addForm.$invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
