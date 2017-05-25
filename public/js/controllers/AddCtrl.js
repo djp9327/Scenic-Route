@@ -113,6 +113,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $location, $route, geoloca
             promise.then(function (results) {
                console.log("At least we've got a defined object");
                $location.path('/slideshow');
+               $route.reload();
             });
 
             }, function error(data) {
